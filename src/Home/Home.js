@@ -15,14 +15,20 @@ function Home({ onLogout, user }) {
 
   useEffect(() => {
     const usuariosSalvos = localStorage.getItem('usuarios');
+    const cidadeSalva = localStorage.getItem('cidade');
     if (usuariosSalvos) {
       setUsuariosCadastrados(JSON.parse(usuariosSalvos));
     }
+    if (cidadeSalva) {
+      setCidade(cidadeSalva);
+    }
   }, []);
-  
+
   useEffect(() => {
     localStorage.setItem('usuarios', JSON.stringify(usuariosCadastrados));
-  }, [usuariosCadastrados]);
+    localStorage.setItem('cidade', cidade);
+  }, [usuariosCadastrados, cidade]);
+
   const handleExibirUsuarios = () => {
     setExibirCadastroUsuario(false);
     setExibirEdicaoUsuario(false);
@@ -58,7 +64,9 @@ function Home({ onLogout, user }) {
     );
     handleFecharEdicao();
   };
-
+  const handleExcluirUsuario = (novosUsuarios) => {
+    setUsuariosCadastrados(novosUsuarios);
+  };
   return (
     <div className="home-container">
       <div className="menu-cabecalho">
@@ -105,7 +113,13 @@ function Home({ onLogout, user }) {
             {usuariosCadastrados.length === 0 ? (
               <h1>Não há usuários cadastrados</h1>
             ) : (
-              <Usuarios usuarios={usuariosCadastrados} cidade={cidade} onEditarUsuario={handleEditarUsuario} />
+              <Usuarios
+              usuarios={usuariosCadastrados}
+              cidade={cidade}
+              onEditarUsuario={handleEditarUsuario}
+              onExcluirUsuario={handleExcluirUsuario}
+            />
+
             )}
           </div>
         </div>
