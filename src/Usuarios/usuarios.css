@@ -1,0 +1,41 @@
+.container {
+    width: 100vw;
+  }
+  
+  td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+    padding: 10px;
+    background-color: none;
+  }
+  
+  table {
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    color: rgb(158, 162, 189);
+    padding: 0px 10px;
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+  }
+  
+  tr {
+    font-size: 20px;
+  }
+  
+  th.black-row {
+    font-weight: 700;
+    height: 40px;
+    background-color: black;
+    color: rgb(158, 162, 189);
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  
+  h1 {
+    text-align: center;
+  }

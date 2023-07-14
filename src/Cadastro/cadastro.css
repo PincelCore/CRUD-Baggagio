@@ -21,7 +21,7 @@
     transition: all 1s ease 0s;
     border-radius: 8px;
 }
-.formulario:nth-child(2){
+.formulario:nth-child(2) {
     background: rgb(56, 55, 81);
     transition: all 1s ease 0s;
     border-radius: 8px;
@@ -32,7 +32,8 @@
     align-self: center;
     position: relative;
     margin-left: 40px;
-}
+  }
+  
 .formas:first-child{
     margin-top: 20px;
 }
