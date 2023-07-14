@@ -1,6 +1,6 @@
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #24292e;
+  background-color: rgb(37, 41, 60);
   }
   
   .login-container {
@@ -61,7 +61,7 @@ body {
     text-align: center;
   }
   .white{
-    display: flex;;
+    display: flex;
     border: 8px solid white;
     border-radius: 100%;
   }

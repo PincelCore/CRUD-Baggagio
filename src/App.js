@@ -5,10 +5,19 @@ import 'typeface-inter';
 import Home from "./Home/Home";
 import { useState } from "react";
 import axios from "axios";
+import { useEffect } from "react";
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('usuario');
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   const handleLogin = async (username) => {
     try {
@@ -17,6 +26,7 @@ export default function App() {
 
       setUser(userData);
       setIsLoggedIn(true);
+      localStorage.setItem('usuario', JSON.stringify(userData));
     } catch (error) {
       if (error.response.status === 404) {
         alert('Usuário não encontrado');
@@ -29,6 +39,7 @@ export default function App() {
   const handleLogout = () => {
     setIsLoggedIn(false);
     setUser(null);
+    localStorage.removeItem('usuario');
   };
 
   return (
@@ -41,3 +52,4 @@ export default function App() {
     </div>
   );
 }
+

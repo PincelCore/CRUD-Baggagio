@@ -1,0 +1,89 @@
+.cadastro-tela{
+    margin-left: 20px;
+}
+.cadastro-container{
+    margin-top: 10px;
+    display: flex;
+}
+.flex{
+    display: flex;
+}
+.cadastro-container button{
+    margin-left: 20px;
+    color: white;
+    background-color: gray;
+    border-radius: 20%;
+}
+.formulario{
+    margin-top: 30px;
+    width: 300px;
+    background: rgb(47, 50, 72);
+    transition: all 1s ease 0s;
+    border-radius: 8px;
+}
+.formulario:nth-child(2){
+    background: rgb(56, 55, 81);
+    transition: all 1s ease 0s;
+    border-radius: 8px;
+    opacity: 1;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    align-self: center;
+    position: relative;
+    margin-left: 40px;
+}
+.formas:first-child{
+    margin-top: 20px;
+}
+.formas:last-child{
+    margin-bottom: 20px;
+}
+.formas p{
+    color: rgb(158, 162, 189);
+    font-size: 17px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.formas input{
+    width: 260px;
+    margin-left: 10px;
+    background: transparent;
+    border: 1px solid rgba(170, 170, 170, 0.667);
+    border-radius: 0%;
+    height: 20px;
+    font-size: 15px;
+    outline: none;
+    color: rgb(255, 255, 255);
+}
+.formas textarea{
+    width: 260px;
+    margin-left: 10px;
+    background: transparent;
+    border: 1px solid rgba(170, 170, 170, 0.667);
+    padding: 0.5em 3px;
+    resize: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+}
+.botoes{
+    display: flex;
+    justify-content: space-between;
+}
+.cadastrar{
+    width: 100px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    background: rgb(68, 77, 221);
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+.voltar{
+    color: white;
+    background-color: gray;
+    width: 60px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
